@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.feo.app.inf.task.Target13">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Файл">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Відкрити">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Зберегти">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Вийти">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Допомога">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Про програму">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Про автора">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="415.0" prefWidth="830.0" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="originalCanvas" height="415.0" onMousePressed="#originalCanvasPressed" onMouseReleased="#originalCanvasReleased" width="415.0" />
+            <Canvas fx:id="canvas" height="415.0" width="415.0" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="180.0" prefWidth="830.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutX="121.0" layoutY="95.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="250.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="250.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="RGB" GridPane.columnSpan="3" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="R" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="G" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="B" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="HSL" GridPane.columnIndex="3" GridPane.columnSpan="3" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="H" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="S" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="L" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Slider fx:id="rSlider" disable="true" max="255.0" min="-255.0" onMouseDragged="#moveSlider" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Slider fx:id="gSlider" disable="true" max="255.0" min="-255.0" onMouseDragged="#moveSlider" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Slider fx:id="bSlider" disable="true" max="255.0" min="-255.0" onMouseDragged="#moveSlider" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Slider fx:id="hSlider" disable="true" max="360.0" min="-360.0" onMouseDragged="#moveSlider" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Slider fx:id="sSlider" disable="true" min="-100.0" onMouseDragged="#moveSlider" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Slider fx:id="lSlider" min="-100.0" onMouseDragged="#moveSlider" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <TextField fx:id="rField" disable="true" onKeyReleased="#inputText" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="gField" disable="true" onKeyReleased="#inputText" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="bField" disable="true" onKeyReleased="#inputText" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="hField" disable="true" onKeyReleased="#inputText" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="sField" disable="true" onKeyReleased="#inputText" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="lField" onKeyReleased="#inputText" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeRGB" text="Застосувати RGB" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeHSL" text="Застосувати HSL" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

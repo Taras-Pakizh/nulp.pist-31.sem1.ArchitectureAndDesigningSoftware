@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.feo.app.inf.task.Target11">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Файл">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Зберегти">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Загрузити">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Вийти">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Допомога">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Про програму">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="P" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#clickMenu" text="Про автора">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="M" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Canvas fx:id="canvas" height="610.0" layoutX="5.0" layoutY="5.0" width="610.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="620.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="174.0" fitWidth="220.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+            <Label layoutX="33.0" layoutY="217.0" text="x" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="220.0" />
+            <Label layoutX="84.0" layoutY="217.0" text="y" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="220.0" />
+            <Label layoutX="33.0" layoutY="251.0" text="d" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="255.0" />
+            <Label layoutX="10.0" layoutY="315.0" text="колір ліній" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="285.0" />
+            <Label layoutX="10.0" layoutY="340.0" text="колір заливки" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="340.0" />
+            <Label layoutX="10.0" layoutY="370.0" text="вписаний квадрат" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="370.0" />
+            <TextField layoutX="29.0" layoutY="213.0" onKeyReleased="#inputText" prefHeight="25.0" prefWidth="50.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="220.0" fx:id="xField" />
+            <TextField fx:id="yField" layoutX="124.0" layoutY="213.0" onKeyReleased="#inputText" prefHeight="25.0" prefWidth="50.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
+            <TextField fx:id="dField" layoutX="36.0" layoutY="247.0" onKeyReleased="#inputText" prefHeight="25.0" prefWidth="75.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="255.0" />
+            <ColorPicker fx:id="brushColorPicker" layoutX="110.0" layoutY="315.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="285.0" />
+            <ColorPicker fx:id="fillColorPicker" layoutX="110.0" layoutY="340.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="340.0" />
+            <CheckBox fx:id="squareCheckBox" alignment="TOP_LEFT" layoutX="124.0" layoutY="370.0" mnemonicParsing="false" onAction="#checkSquare" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="370.0" />
+            <Button layoutX="20.0" layoutY="400.0" mnemonicParsing="false" onAction="#clickBuildFigure" text="Побудувати" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="400.0" />
+            <Label layoutX="20.0" layoutY="494.0" text="заливка фігури" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="315.0" />
+            <CheckBox fx:id="fillCheckBox" layoutX="134.0" layoutY="494.0" mnemonicParsing="false" onAction="#checkFill" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="315.0" />
+            <Button layoutX="84.0" layoutY="435.0" mnemonicParsing="false" onAction="#clickClearCanvas" text="Очистити полотно" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="430.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

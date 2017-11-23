@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.feo.app.inf.TaskWindow">
+  <items>
+    <AnchorPane maxHeight="25.0" maxWidth="300.0" minHeight="25.0" minWidth="300.0" prefHeight="25.0" prefWidth="300.0">
+         <children>
+            <Button layoutX="14.0" layoutY="13.0" maxHeight="40.0" maxWidth="75.0" minHeight="40.0" minWidth="75.0" mnemonicParsing="false" onAction="#exitButtonClick" prefHeight="40.0" prefWidth="75.0" text="Вихід" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="74.0" layoutY="13.0" maxHeight="40.0" maxWidth="75.0" minHeight="40.0" minWidth="75.0" mnemonicParsing="false" onAction="#endButtonClick" prefHeight="40.0" prefWidth="75.0" text="Завершити" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="136.0" layoutY="13.0" maxHeight="40.0" maxWidth="75.0" minHeight="40.0" minWidth="75.0" mnemonicParsing="false" onAction="#reloadButtonClick" prefHeight="40.0" prefWidth="75.0" text="Перезапуск" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="0.0" />
+            <Button layoutX="204.0" layoutY="13.0" maxHeight="40.0" maxWidth="75.0" minHeight="40.0" minWidth="75.0" mnemonicParsing="false" onAction="#runButtonClick" prefHeight="40.0" prefWidth="75.0" text="Запустити програму" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <ListView fx:id="testCaseListView" editable="true" layoutX="56.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0" />
+            <Label alignment="CENTER" layoutX="121.0" layoutY="6.0" text="Тести" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

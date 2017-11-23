@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.feo.app.inf.task.Target5">
+   <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+      <tabs>
+         <Tab text="Розв'язання">
+            <content>
+               <AnchorPane fx:id="chartPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <GridPane gridLinesVisible="true" layoutX="40.0" layoutY="76.0">
+                        <columnConstraints>
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="15.0" prefWidth="30.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                           <Label text="X" />
+                           <Label alignment="CENTER" text="Y" GridPane.rowIndex="1" />
+                           <TextField promptText="x1" GridPane.columnIndex="1" fx:id="x1Field" />
+                           <TextField fx:id="y1Field" promptText="y1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <TextField promptText="x2" GridPane.columnIndex="2" fx:id="x2Field" />
+                           <TextField fx:id="y2Field" promptText="y2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <TextField promptText="x3" GridPane.columnIndex="3" fx:id="x3Field" />
+                           <TextField fx:id="y3Field" promptText="y3" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           <TextField promptText="x4" GridPane.columnIndex="4" fx:id="x4Field" />
+                           <TextField fx:id="y4Field" promptText="y4" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           <TextField promptText="x5" GridPane.columnIndex="5" fx:id="x5Field" />
+                           <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                           <TextField promptText="x6" GridPane.columnIndex="6" fx:id="x6Field" />
+                           <TextField fx:id="y6Field" promptText="y6" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                           <TextField promptText="x7" GridPane.columnIndex="7" fx:id="x7Field" />
+                           <TextField fx:id="y7Field" promptText="y7" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                           <TextField promptText="x8" GridPane.columnIndex="8" fx:id="x8Field" />
+                           <TextField fx:id="y5Field" promptText="y5" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                           <TextField fx:id="y8Field" promptText="y8" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                           <TextField promptText="x9" GridPane.columnIndex="9" fx:id="x9Field" />
+                           <TextField fx:id="y9Field" promptText="y9" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                           <TextField promptText="x10" GridPane.columnIndex="10" fx:id="x10Field" />
+                           <TextField fx:id="y10Field" promptText="y10" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                           <TextField prefHeight="40.0" prefWidth="170.0" promptText="Введіть x" GridPane.columnIndex="11" fx:id="xField" />
+                           <Label fx:id="yField" text="???" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                        </children>
+                     </GridPane>
+                     <Button fx:id="countBtn" alignment="CENTER" layoutX="503.0" layoutY="262.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAction" prefHeight="40.0" prefWidth="150.0" text="Старт" />
+                     <ComboBox fx:id="method" layoutX="347.0" layoutY="262.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="150.0" promptText="Виберіть метод">
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets></ComboBox>
+                     <CheckBox fx:id="random" layoutX="442.0" layoutY="233.0" mnemonicParsing="false" text="Рандомні дані">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </CheckBox>
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+         <Tab text="Лог">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <TextArea fx:id="logText" editable="false" layoutX="85.0" layoutY="14.0" prefHeight="369.0" prefWidth="413.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     <Button fx:id="clearLogButton" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearLog" prefWidth="200.0" text="Очистити лог" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+      </tabs>
+   </TabPane>
+</AnchorPane>

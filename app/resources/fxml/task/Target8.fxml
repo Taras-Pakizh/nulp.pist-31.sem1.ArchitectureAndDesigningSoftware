@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.feo.app.inf.task.Target8">
+   <children>
+      <TextArea fx:id="log" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="575.0" />
+      <TextField fx:id="command" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="468.0" />
+      <Button layoutX="487.0" layoutY="361.0" mnemonicParsing="false" onAction="#onAction" prefHeight="25.0" prefWidth="99.0" text="Go" />
+   </children>
+</AnchorPane>
