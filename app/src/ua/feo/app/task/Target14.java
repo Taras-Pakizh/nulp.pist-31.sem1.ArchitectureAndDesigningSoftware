@@ -1,4 +1,4 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -15,12 +15,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.util.Pair;
 import javafx.util.converter.DoubleStringConverter;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Target14 implements TargetInf {
 

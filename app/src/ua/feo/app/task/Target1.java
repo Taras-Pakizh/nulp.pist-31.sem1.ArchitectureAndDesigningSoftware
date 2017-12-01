@@ -1,4 +1,4 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;

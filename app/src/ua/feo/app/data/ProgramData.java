@@ -1,10 +1,10 @@
-package ua.feo.app.inf.data;
+package ua.feo.app.data;
 
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import ua.feo.app.inf.StageRouter;
 import ua.feo.app.inf.TaskRouter;
-import ua.feo.app.inf.task.*;
+import ua.feo.app.task.*;
 import ua.feo.md5.MD5;
 
 import java.util.*;

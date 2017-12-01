@@ -1,15 +1,13 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;

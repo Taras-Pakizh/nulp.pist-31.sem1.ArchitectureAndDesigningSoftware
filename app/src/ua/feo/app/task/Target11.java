@@ -1,4 +1,4 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,12 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.util.Pair;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -22,7 +20,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Target11 implements TargetInf {
 

@@ -10,9 +10,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.cell.CheckBoxListCell;
 import javafx.scene.paint.Color;
 import javafx.util.Pair;
-import ua.feo.app.inf.data.ProgramData;
+import ua.feo.app.data.ProgramData;
 
-import java.util.List;
 import java.util.Map;
 
 public class ResultWindow {

@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ua.feo.app.inf.task.TargetInf;
+import ua.feo.app.task.TargetInf;
 
 import java.awt.*;
 

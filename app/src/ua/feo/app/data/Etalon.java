@@ -1,4 +1,4 @@
-package ua.feo.app.inf.data;
+package ua.feo.app.data;
 
 public class Etalon {
 

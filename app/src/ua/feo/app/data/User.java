@@ -1,6 +1,6 @@
-package ua.feo.app.inf.data;
+package ua.feo.app.data;
 
-import ua.feo.app.inf.task.TargetInf;
+import ua.feo.app.task.TargetInf;
 
 import java.util.HashMap;
 import java.util.Map;

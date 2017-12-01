@@ -3,7 +3,7 @@ package ua.feo.app.inf;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import ua.feo.app.inf.data.ProgramData;
+import ua.feo.app.data.ProgramData;
 import ua.feo.app.inf.dialog.Dialog;
 
 public class LoginWindow {

@@ -1,12 +1,10 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.util.Pair;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Target5 implements TargetInf {
 

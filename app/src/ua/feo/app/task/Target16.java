@@ -1,12 +1,9 @@
-package ua.feo.app.inf.task;
-
-import javafx.util.Pair;
+package ua.feo.app.task;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 public class Target16 implements TargetInf {
 

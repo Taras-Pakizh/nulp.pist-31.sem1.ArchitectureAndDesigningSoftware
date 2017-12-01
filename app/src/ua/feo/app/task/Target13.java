@@ -1,4 +1,4 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -15,7 +15,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
-import javafx.util.Pair;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -24,7 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 public class Target13 implements TargetInf {
 

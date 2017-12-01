@@ -1,12 +1,10 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.util.Pair;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Target8 implements TargetInf {
 

@@ -1,6 +1,4 @@
-package ua.feo.app.inf.task;
-
-import javafx.util.Pair;
+package ua.feo.app.task;
 
 import java.util.List;
 import java.util.Map;

@@ -3,7 +3,7 @@ package ua.feo.app;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import ua.feo.app.inf.StageRouter;
-import ua.feo.app.inf.data.ProgramData;
+import ua.feo.app.data.ProgramData;
 
 public class Main extends Application {
 

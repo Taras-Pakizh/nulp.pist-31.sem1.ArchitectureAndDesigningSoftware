@@ -1,4 +1,4 @@
-package ua.feo.app.inf.task;
+package ua.feo.app.task;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,11 +7,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
-import javafx.util.Pair;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Target12 implements TargetInf {
 

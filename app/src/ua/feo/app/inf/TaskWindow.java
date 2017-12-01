@@ -2,21 +2,15 @@ package ua.feo.app.inf;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.cell.CheckBoxListCell;
-import javafx.util.Callback;
-import javafx.util.Pair;
-import ua.feo.app.inf.data.ProgramData;
+import ua.feo.app.data.ProgramData;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.stream.Collectors;
 
 public class TaskWindow {
 

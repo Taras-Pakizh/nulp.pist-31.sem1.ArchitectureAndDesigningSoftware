@@ -7,10 +7,9 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.util.Callback;
-import ua.feo.app.inf.data.ProgramData;
+import ua.feo.app.data.ProgramData;
 import ua.feo.app.inf.dialog.Dialog;
-import ua.feo.app.inf.task.TargetInf;
+import ua.feo.app.task.TargetInf;
 
 import java.util.List;
 
