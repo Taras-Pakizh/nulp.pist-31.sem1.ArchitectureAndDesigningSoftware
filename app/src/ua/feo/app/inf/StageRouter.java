@@ -4,10 +4,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import ua.feo.app.task.TargetInf;
 
 import java.awt.*;
 
-public class StageRouter {
+public class StageRouter implements RouterInf {
 
     public final static String LOGIN_WINDOW = "LoginWindow.fxml";
     public final static String MAIN_WINDOW = "MainWindow.fxml";
@@ -20,7 +21,8 @@ public class StageRouter {
         this.stage = stage;
     }
 
-    public void goTo(String resource) {
+    @Override
+    public Window goTo(String resource) {
         try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getClassLoader().getResource("fxml/" + resource));
@@ -32,8 +34,22 @@ public class StageRouter {
             stage.setX(screenDimension.getWidth() / 2 - scene.getWidth() / 2);
             stage.setY(screenDimension.getHeight() / 2 - scene.getHeight() / 2);
             stage.show();
+            return loader.getController();
         } catch (Exception ex){
             ex.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Window getController(String resource) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("fxml/" + resource));
+            return loader.getController();
+        } catch (Exception ex){
+            ex.printStackTrace();
+            return null;
         }
     }
 

@@ -12,7 +12,7 @@ import ua.feo.app.data.ProgramData;
 import java.util.Map;
 import java.util.HashMap;
 
-public class TaskWindow {
+public class TaskWindow implements Window {
 
     private final ProgramData programData = ProgramData.get();
 
@@ -56,7 +56,7 @@ public class TaskWindow {
 
     @FXML
     public void runButtonClick() {
-        programData.getTaskRouter().goTo(programData.getIndexCurrentTarget());
+        programData.getTaskRouter().goTo(String.valueOf(programData.getIndexCurrentTarget()));
     }
 
 }

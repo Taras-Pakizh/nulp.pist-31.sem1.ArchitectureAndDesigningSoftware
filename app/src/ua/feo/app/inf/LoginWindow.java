@@ -5,8 +5,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import ua.feo.app.data.ProgramData;
 import ua.feo.app.inf.dialog.Dialog;
+import ua.feo.pattern.AppFacade;
 
-public class LoginWindow {
+public class LoginWindow implements Window {
 
     private final ProgramData programData = ProgramData.get();
 

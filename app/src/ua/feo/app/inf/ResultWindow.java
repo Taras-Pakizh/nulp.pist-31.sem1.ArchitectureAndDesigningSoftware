@@ -14,7 +14,7 @@ import ua.feo.app.data.ProgramData;
 
 import java.util.Map;
 
-public class ResultWindow {
+public class ResultWindow implements Window {
 
     private final ProgramData programData = ProgramData.get();
 

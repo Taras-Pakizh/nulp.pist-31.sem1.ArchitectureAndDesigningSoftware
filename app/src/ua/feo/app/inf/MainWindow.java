@@ -13,7 +13,7 @@ import ua.feo.app.task.TargetInf;
 
 import java.util.List;
 
-public class MainWindow {
+public class MainWindow implements Window {
 
     private final ProgramData programData = ProgramData.get();
 

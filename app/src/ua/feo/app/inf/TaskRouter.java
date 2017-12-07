@@ -8,9 +8,9 @@ import ua.feo.app.task.TargetInf;
 
 import java.awt.*;
 
-public class TaskRouter {
+public class TaskRouter implements RouterInf, IteratorInf<TargetInf> {
 
-    public static final int HIDE = Integer.MIN_VALUE;
+    public static final String HIDE = "";
 
     private final Stage stage;
 
@@ -18,10 +18,11 @@ public class TaskRouter {
         this.stage = stage;
     }
 
-    public void goTo(int resource) {
-        if (resource == HIDE) {
+    @Override
+    public TargetInf goTo(String resource) {
+        if (resource.equals(HIDE)) {
             stage.hide();
-            return;
+            return null;
         }
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -34,12 +35,15 @@ public class TaskRouter {
             stage.setX(screenDimension.getWidth() / 2 - scene.getWidth() / 2);
             stage.setY(screenDimension.getHeight() / 2 - scene.getHeight() / 2);
             stage.show();
+            return loader.getController();
         } catch (Exception ex){
             ex.printStackTrace();
         }
+        return null;
     }
 
-    public TargetInf getController(int resource) {
+    @Override
+    public TargetInf getController(String resource) {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getClassLoader().getResource("fxml/task/TaskWindow" + resource + ".fxml"));
@@ -48,5 +52,30 @@ public class TaskRouter {
             ex.printStackTrace();
             return null;
         }
+    }
+
+    private int currentTarget = 1;
+
+    @Override
+    public TargetInf reset() {
+        currentTarget = 1;
+        return goTo(String.valueOf(currentTarget));
+    }
+
+    @Override
+    public TargetInf next() {
+        currentTarget++;
+        return goTo(String.valueOf(currentTarget));
+    }
+
+    @Override
+    public boolean hasNext() {
+        currentTarget++;
+        return getController(String.valueOf(currentTarget)) != null;
+    }
+
+    @Override
+    public TargetInf current() {
+        return goTo(String.valueOf(currentTarget));
     }
 }
