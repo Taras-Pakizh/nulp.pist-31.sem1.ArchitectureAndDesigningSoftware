@@ -3,3 +3,4 @@ app/.idea/
 app/out/
 app/lib/
 *.data
+app/application.bat
