@@ -20,10 +20,18 @@
           <AnchorPane maxHeight="100.0" maxWidth="300.0" minHeight="100.0" minWidth="300.0" prefHeight="100.0" prefWidth="300.0">
                <children>
                   <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="20.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
-                  <Button layoutX="220.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitButtonClick" text="Вихід" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <Button layoutX="220.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitButtonClick" text="Вихід" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0" />
+                  <Label fx:id="currentUserField" alignment="CENTER_RIGHT" layoutX="22.0" layoutY="23.0" maxHeight="25.0" minHeight="25.0" prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="20.0" />
+                  <Label fx:id="disabledTaskField" alignment="CENTER" layoutX="22.0" layoutY="63.0" textFill="#7f7f7f" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="225.0" />
+                  <Label fx:id="enabledTaskField" alignment="CENTER" layoutX="76.0" layoutY="63.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="150.0" />
+                  <Label fx:id="completedTaskField" alignment="CENTER" layoutX="136.0" layoutY="63.0" textFill="LIME" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="75.0" />
+                  <Label fx:id="failedTaskField" alignment="CENTER" layoutX="231.0" layoutY="63.0" textFill="RED" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
-          <AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" />
+          <AnchorPane maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="targetDataField" alignment="TOP_LEFT" layoutX="79.0" layoutY="53.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0" />
+               </children></AnchorPane>
         </items>
       </SplitPane>
    </items>

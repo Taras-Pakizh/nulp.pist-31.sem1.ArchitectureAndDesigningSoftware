@@ -2,6 +2,7 @@ package ua.feo.app.data;
 
 import ua.feo.app.task.TargetInf;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,9 +10,9 @@ public class User {
 
     public final static User NULL_USER = new User("", "", new HashMap<>());
 
-    public final String name;
-    public final String password;
-    private final Map<TargetInf, TargetStatus> targets;
+    public String name;
+    public String password;
+    private Map<TargetInf, TargetStatus> targets;
 
     public User(String name, String password, Map<TargetInf, TargetStatus> targets) {
         this.name = name;

@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 import ua.feo.app.task.TargetInf;
 
 import java.awt.*;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 
 public class TaskRouter implements RouterInf, IteratorInf<TargetInf> {
 
@@ -78,4 +81,5 @@ public class TaskRouter implements RouterInf, IteratorInf<TargetInf> {
     public TargetInf current() {
         return goTo(String.valueOf(currentTarget));
     }
+
 }

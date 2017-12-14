@@ -7,14 +7,21 @@ import ua.feo.app.inf.TaskRouter;
 import ua.feo.app.task.*;
 import ua.feo.md5.MD5;
 
+import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ProgramData {
+public class ProgramData implements Externalizable  {
 
-    private final static ProgramData programData = new ProgramData();
+    public static final ProgramData NULL_PROGRAM_DATA = new ProgramData();
+
+    private static ProgramData programData;
 
     public static ProgramData get() {
+        if (programData == null) {
+            ProgramData data = Serializator.restore();
+            programData = data == NULL_PROGRAM_DATA ? new ProgramData() : data;
+        }
         return programData;
     }
 
@@ -43,11 +50,12 @@ public class ProgramData {
     }};
 
     private User currentUser = User.NULL_USER;
-    private List<User> userList = new ArrayList<>();
+    private List<User> userList;
 
     private Map<String, Boolean> testData = new HashMap<>();
 
-    private ProgramData() {
+    public ProgramData() {
+        userList = new ArrayList<>();
     }
 
     public Stage getStage() {
@@ -143,5 +151,34 @@ public class ProgramData {
             currentUser.setStatusOfTarget(targetList.get(currentTarget), TargetStatus.Failed);
         }
         return result;
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.write(userList.size());
+        for (User u : userList) {
+            out.writeObject(u.name);
+            out.writeObject(u.password);
+            for (TargetInf target : targetList) {
+                out.write(u.statusOfTarget(target).i);
+            }
+        }
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        int userCount = in.read();
+        userList = new ArrayList<>(userCount);
+        for (int i = 0; i < userCount; i++) {
+            String name = (String) in.readObject();
+            String password = (String) in.readObject();
+            User user = new User(name, password, new HashMap<>());
+            for (TargetInf target : targetList) {
+                int ii = in.read();
+                TargetStatus ts = TargetStatus.get(ii);
+                user.setStatusOfTarget(target, ts);
+            }
+            userList.add(user);
+        }
     }
 }

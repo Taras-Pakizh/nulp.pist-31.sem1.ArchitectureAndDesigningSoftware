@@ -2,3 +2,4 @@ app/.idea/
 *.iml
 app/out/
 app/lib/
+*.data
