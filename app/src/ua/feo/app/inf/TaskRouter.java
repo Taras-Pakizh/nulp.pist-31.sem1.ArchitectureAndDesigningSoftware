@@ -29,7 +29,7 @@ public class TaskRouter implements RouterInf, IteratorInf<TargetInf> {
         }
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getClassLoader().getResource("fxml/task/Target" + (resource + 1) + ".fxml"));
+            loader.setLocation(getClass().getClassLoader().getResource("fxml/task/Target" + (Integer.parseInt(resource) + 1) + ".fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setResizable(false);
